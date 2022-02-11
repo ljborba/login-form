@@ -123,4 +123,15 @@ input:hover[type="submit"] {
     width: auto;
 }
 
+/* validações */ 
+
+.error-validation {
+    color: red;
+    position: absolute;
+    font-size: .8rem;
+}
+
+.template {
+    display: none;
+}
 
