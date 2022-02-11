@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 170 170">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 60px;
+        fill: #fff;
+        font-family: "The Bold Font";
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <path id="Polígono_1" data-name="Polígono 1" class="cls-1" d="M132.719,158.01l-95.073.19L8.087,67.839,84.891,11.8l77.027,55.729Z"/>
+  <path id="Polígono_2" data-name="Polígono 2" class="cls-1" d="M45.667,145L21.575,70.826l63.1-45.833L147.763,70.84l-24.108,74.168Z"/>
+  <text id="L" class="cls-2" x="51.667" y="107.667">L</text>
+  <text id="J" class="cls-2" x="85.667" y="130.667">J</text>
+</svg>
