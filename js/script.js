@@ -11,8 +11,13 @@ class Validator { // Vakidator com V maiúsculo
         // Transformo um HTMLCollection -> Array
         let inputsArray = [...inputs];
         inputsArray.forEach(function(input){
-            console.log(input);
-        });
+            // Loop em todas as validações existentes
+            for(let i = 0 ; this.validations.lenght > i; i++) {
+                for(input.getAttribute(this.validations[i])!= null) {
+
+                }
+            }
+        }, this);
     }
 }
 
