@@ -7,6 +7,11 @@ class validator {
     // iniciar a validação de todos os campos
     validate(form) {
         // pegar os inputs
+        let inputs = form.getElementsByTagName("input");
+        console.log(inputs);
+        // HTMLCollection -> Array
+        let inputsArray = [...inputs];
+        console.log(inputsArray);
     }
 }
 
