@@ -18,12 +18,14 @@ class Validator { // Vakidator com V maiúsculo
                     let method = this.validations[i].replace("data-", "").replace("-", "");
                     // Valor do input
                     let value = input.getAttribute(this.validations[i]);
+                    // Invocar o método
+                    this[method](input, value);
                 }
             }
         }, this);
     }
     // Verifica se um input tem um número mínimo de caracteres
-    minlength() {
+    minlength(input, minValue) {
 
     }
 }
