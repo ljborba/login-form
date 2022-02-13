@@ -13,11 +13,18 @@ class Validator { // Vakidator com V maiúsculo
         inputsArray.forEach(function(input){
             // Loop em todas as validações existentes
             for(let i = 0 ; this.validations.lenght > i; i++) {
-                for(input.getAttribute(this.validations[i])!= null) {
-
+                if(input.getAttribute(this.validations[i]) != null) {
+                    // Limpando a string para se tornar um método
+                    let method = this.validations[i].replace("data-", "").replace("-", "");
+                    // Valor do input
+                    let value = input.getAttribute(this.validations[i]);
                 }
             }
         }, this);
+    }
+    // Verifica se um input tem um número mínimo de caracteres
+    minlength() {
+
     }
 }
 
