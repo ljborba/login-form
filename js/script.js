@@ -26,7 +26,11 @@ class Validator { // Vakidator com V maiúsculo
     }
     // Verifica se um input tem um número mínimo de caracteres
     minlength(input, minValue) {
-
+        let inputLength = input.value.length;
+        let errorMessage = "O campo precisa ter pelo menos ${minValue} caracteres";
+        if(inputLength < minValue) {
+            console.log(errorMessage);
+        }
     }
 }
 
