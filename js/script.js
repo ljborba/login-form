@@ -1,6 +1,8 @@
 class Validator {
     constructor() {
-        this.validations = []
+        this.validations = [
+            "data-min-length",
+        ]
     }
 
     // Iniciar a validação de todos os campos
@@ -14,8 +16,15 @@ class Validator {
 
         // Loop nos inputs e validação no que for encontrado
         inputsArray.forEach(function(input) {
-            console.log(input);
-        });
+            
+            // Loop em todas as validações existentes
+            for(let i = 0; this.validations.length > i; i++) {
+                if(input.getAttribute(this.validations[i]) != null) {
+                    console.log("Achou validação");
+                }
+            }
+
+        }, this);
     }
 }
 
