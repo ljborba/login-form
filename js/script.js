@@ -94,7 +94,6 @@ class Validator {
 let form = document.getElementById("register-form");
 let submit = document.getElementById("btn-submit");
 
-
 let validator = new Validator();
 
 // Evento que dispara as validações
