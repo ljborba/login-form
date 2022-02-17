@@ -3,135 +3,140 @@
 /* configurações gerais */
 
 * {
-    padding: 0;
-    margin: 0;
-    border: none;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #1b1f27;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden; /* para não ocorrer barra de rolagen na pagina */
-    padding: 5vh; /* vh = view height -> 5% da tela */
+  background-color: #1b1f27;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* para não ocorrer barra de rolagen na pagina */
+  padding: 5vh; /* vh = view height -> 5% da tela */
 }
 
 a {
-    color: royalblue;
-    text-decoration: none;
- }
-
- .link-return:hover {
-    color: white;
+  color: royalblue;
+  text-decoration: none;
 }
 
- input, label {
-     display: block;
-     width: 100%;
-     outline: none;
- }
+.link-return:hover {
+  color: white;
+}
 
- input:focus, label:focus { /* Tira as bordas do input quando clica no mesmo */ 
-     outline: none;
- }
+input,
+label {
+  display: block;
+  width: 100%;
+  outline: none;
+}
 
- /* configurações formulário */
+input:focus,
+label:focus {
+  /* Tira as bordas do input quando clica no mesmo */
+  outline: none;
+}
 
- #main-container {
-     width: 730px;
-     margin-left: auto;
-     margin-right: auto;
-     background-color: #181920;
-     border-radius: 5px;
-     padding: 25px;
-     color: white;
-     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
- }
+/* configurações formulário */
+
+#main-container {
+  width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #181920;
+  border-radius: 5px;
+  padding: 25px;
+  color: white;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
 
 #main-container h1 {
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 25px;
-    font-size: 1.6rem; /* adaptada ao elemento root da página */
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 1.6rem; /* adaptada ao elemento root da página */
 }
 
 form {
-    display: flex;
-    flex-wrap: wrap; /* para alinhar os elementos */
-    justify-content: space-between; /* criando o espaçamento entre os inputs*/ 
+  display: flex;
+  flex-wrap: wrap; /* para alinhar os elementos */
+  justify-content: space-between; /* criando o espaçamento entre os inputs*/
 }
 
 .full-box {
-    flex: 1 1 100%; 
-    position: relative; 
+  flex: 1 1 100%;
+  position: relative;
 }
 
 .half-box {
-    flex: 1 1 45%;
-    position: relative;
+  flex: 1 1 45%;
+  position: relative;
 }
 
 .spacing {
-    margin-right: 3%;
+  margin-right: 3%;
 }
 
 label {
-    font-weight: bold;
-    font-size: .9rem;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 input {
-    background-color: #181920;
-    padding: 12.5px;
-    font-size: .9rem;
-    margin-bottom: 25px;
-    color: white;
+  background-color: #181920;
+  padding: 12.5px;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  color: white;
 }
 
 .input-focus:focus {
-    border-color: royalblue;
+  border-color: royalblue;
 }
 
 input::placeholder {
-    color: rgba(255, 255, 255, 0.600);
-    font-size: .8rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
 }
 
 input[type="submit"] {
-    background-color: royalblue;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1rem;
-    cursor: pointer;
+  background-color: royalblue;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 input:hover[type="submit"] {
-    background-color: rgb(19, 56, 168);
+  background-color: rgb(19, 56, 168);
 }
 
 .inp-border-bottom {
-    border-bottom: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
-#agreement, #agreement-label {
-    display: inline-block;
-    width: auto;
+#agreement,
+#agreement-label {
+  display: inline-block;
+  width: auto;
 }
 
-/* validações */ 
+/* validações */
 
 .error-validation {
-    color: red;
-    position: absolute;
-    font-size: .8rem;
+  color: red;
+  position: absolute;
+  top: 80%;
+  font-size: 0.8rem;
 }
 
 .template {
-    display: none;
+  display: none;
 }
-
