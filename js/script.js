@@ -4,6 +4,7 @@ class Validator {
             "data-required",
             "data-min-length",
             "data-max-length",
+            "data-email-validate",
         ]
     }
 
@@ -71,6 +72,17 @@ class Validator {
             this,this.printMessage(input, errorMessage);
         }
     }
+
+    // Método para validar emails
+    emailvalidate(input) {
+
+        // email@email.com.br
+        let re = /\S+@\S+\.S+/;
+
+        let email = input.value;
+
+        let errorMessage = `Insira um e-mail no padrão email@gmail.com`;
+    } 
 
     // Método para imprimir mensagens de erro na tela
     printMessage(input, msg) {
