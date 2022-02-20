@@ -81,7 +81,11 @@ class Validator {
 
         let email = input.value;
 
-        let errorMessage = `Insira um e-mail no padrão email@gmail.com`;
+        let errorMessage = `Insira um e-mail no padrão email@email.com`;
+
+        if (!re.test(email)) {
+            this.printMessage(input, errorMessage);
+        }
     } 
 
     // Método para imprimir mensagens de erro na tela
