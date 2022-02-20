@@ -69,7 +69,7 @@ class Validator {
 
         if (inputLength > maxValue) {
 
-            this,this.printMessage(input, errorMessage);
+            this.printMessage(input, errorMessage);
         }
     }
 
