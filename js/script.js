@@ -5,6 +5,8 @@ class Validator {
             "data-min-length",
             "data-max-length",
             "data-email-validate",
+            "data-only-letters",
+            "data-equal",
         ]
     }
 
@@ -88,6 +90,22 @@ class Validator {
         }
     } 
 
+    // Valida se o campo tem apenas letras
+
+    onlyletters(input) {
+        
+        let re = /^[A-Za-z]+$/;
+
+        let inputValue = input.value;
+
+        let errorMessage = `Este campo não aceita números e caracteres especiais`;
+
+        if (!re.test(inputValue)) {
+
+            this.printMessage(input, errorMessage);
+        }
+    }
+
     // Método para imprimir mensagens de erro na tela
     printMessage(input, msg) {
 
@@ -125,6 +143,19 @@ class Validator {
             this.printMessage(input, errorMessage);
         }
     }
+
+    // Verifica se dois campos são iguais
+    equal(input, inputName) {
+        
+        let inputToCompare = document.getElementsByName(inputName)[0];
+
+        let errorMessage = `As duas senhas precisam ser iguais`;
+
+        if (input.value != inputToCompare.value) {
+
+            this.printMessage(input, errorMessage);
+        }
+    } 
 }
 
 let form = document.getElementById("register-form");
