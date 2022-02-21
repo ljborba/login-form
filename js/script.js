@@ -77,7 +77,7 @@ class Validator {
     emailvalidate(input) {
 
         // email@email.com.br
-        let re = /\S+@\S+\.S+/;
+        let re = /\S+@\S+\.\S+/;
 
         let email = input.value;
 
