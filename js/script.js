@@ -7,6 +7,7 @@ class Validator {
             "data-email-validate",
             "data-only-letters",
             "data-equal",
+            "data-password-validate",
         ]
     }
 
@@ -47,6 +48,19 @@ class Validator {
             }
 
         }, this);
+    }
+
+    // Verifica se o input é requerido
+    required(input) {
+
+        let inputValue = input.value;
+
+        if (inputValue === "") {
+
+            let errorMessage = `Este campo é obrigatório`;
+
+            this.printMessage(input, errorMessage);
+        }
     }
     
     // Verifica se um input tem um número mínimo de caracteres
@@ -106,6 +120,56 @@ class Validator {
         }
     }
 
+    // Verifica se dois campos são iguais
+    equal(input, inputName) {
+        
+        let inputToCompare = document.getElementsByName(inputName)[0];
+
+        let errorMessage = `As duas senhas precisam ser iguais`;
+
+        if (input.value != inputToCompare.value) {
+
+            this.printMessage(input, errorMessage);
+        }
+    } 
+
+    // Valida o campo de senha
+    passValidate(input) {
+        
+        // transformar string em um array
+
+        let charArr = input.value.split("");
+
+        let uppercases = 0;
+
+        let numbers = 0;
+
+        for (let i = 0; charArr.length > i; i++) {
+
+            if (charArr[i] === charArr[i].toUpperCase() && isNaN(parseInt(charArr[i]))) {
+
+                uppercases++;
+            }
+
+        else if (!isNaN(parseInt(charArr[i]))) {
+
+            numbers++;
+        }
+        }
+
+        if (uppercases === 0 || numbers === 0) {
+
+            let errorMessage = `A senha precisa de um caractere maiúsculo e um número`;
+
+            this.printMessage(input, errorMessage);
+        }
+    }
+
+     // Limpa as validações da tela
+     cleanValidations(validations) {
+        validations.forEach(el => el.remove());
+    }
+
     // Método para imprimir mensagens de erro na tela
     printMessage(input, msg) {
 
@@ -125,37 +189,6 @@ class Validator {
             inputParent.appendChild(template);
         }
     }
-
-    // Limpa as validações da tela
-    cleanValidations(validations) {
-        validations.forEach(el => el.remove());
-    }
-
-    // Verifica se o input é requerido
-    required(input) {
-
-        let inputValue = input.value;
-
-        if (inputValue === "") {
-
-            let errorMessage = `Este campo é obrigatório`;
-
-            this.printMessage(input, errorMessage);
-        }
-    }
-
-    // Verifica se dois campos são iguais
-    equal(input, inputName) {
-        
-        let inputToCompare = document.getElementsByName(inputName)[0];
-
-        let errorMessage = `As duas senhas precisam ser iguais`;
-
-        if (input.value != inputToCompare.value) {
-
-            this.printMessage(input, errorMessage);
-        }
-    } 
 }
 
 let form = document.getElementById("register-form");
