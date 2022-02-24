@@ -1,13 +1,13 @@
 class Validator {
     constructor() {
         this.validations = [
+            "data-min-Length",
+            "data-max-Length",
+            "data-only-Letters",
+            "data-email-Validate",
             "data-required",
-            "data-min-length",
-            "data-max-length",
-            "data-email-validate",
-            "data-only-letters",
-            "data-equal",
-            "data-password-validate",
+            "data-eQual",
+            "data-password-Validate",
         ]
     }
 
@@ -64,7 +64,7 @@ class Validator {
     }
     
     // Verifica se um input tem um número mínimo de caracteres
-    minlength(input, minValue) {
+    minLength(input, minValue) {
 
         let inputLength = input.value.length;
 
@@ -77,7 +77,7 @@ class Validator {
     }
 
     // Verifica se um input passou do limite de caracteres
-    maxlength(input, maxValue) {
+    maxLength(input, maxValue) {
     
         let inputLength = input.value.length;
 
@@ -90,7 +90,7 @@ class Validator {
     }
 
     // Método para validar emails
-    emailvalidate(input) {
+    emailValidate(input) {
 
         // email@email.com.br
         let re = /\S+@\S+\.\S+/;
@@ -106,7 +106,7 @@ class Validator {
 
     // Valida se o campo tem apenas letras
 
-    onlyletters(input) {
+    onlyLetters(input) {
         
         let re = /^[A-Za-z]+$/;
 
@@ -121,7 +121,7 @@ class Validator {
     }
 
     // Verifica se dois campos são iguais
-    equal(input, inputName) {
+    eQual(input, inputName) {
         
         let inputToCompare = document.getElementsByName(inputName)[0];
 
@@ -134,7 +134,7 @@ class Validator {
     } 
 
     // Valida o campo de senha
-    passValidate(input) {
+    passwordValidate(input) {
         
         // transformar string em um array
 
@@ -165,30 +165,31 @@ class Validator {
         }
     }
 
-     // Limpa as validações da tela
-     cleanValidations(validations) {
-        validations.forEach(el => el.remove());
-    }
-
+    
     // Método para imprimir mensagens de erro na tela
     printMessage(input, msg) {
-
+        
         // Verificar a quantidade de erros
         let errorsQtd = input.parentNode.querySelector(".error-validation");
-
+        
         if (errorsQtd === null) {
-
+            
             let template = document.querySelector(".error-validation").cloneNode(true);
-
+            
             template.textContent = msg;
-
+            
             let inputParent = input.parentNode;
-
+            
             template.classList.remove("template");
-
+            
             inputParent.appendChild(template);
         }
     }
+    
+    // Limpa as validações da tela
+    cleanValidations(validations) {
+       validations.forEach(el => el.remove());
+   }
 }
 
 let form = document.getElementById("register-form");
