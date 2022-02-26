@@ -105,7 +105,6 @@ class Validator {
     } 
 
     // Valida se o campo tem apenas letras
-
     onlyLetters(input) {
         
         let re = /^[A-Za-z]+$/;
@@ -199,6 +198,14 @@ let validator = new Validator();
 
 // Evento que dispara as validações
 submit.addEventListener("click", function(e) {
+
     e.preventDefault();
         validator.validate(form);
+
+let checkbox = document.getElementById("agreement");
+let div_checkbox = document.getElementById("div_checkbox");
+
+if (checkbox.checked === false) {
+    div_checkbox.innerHTML += '<p class="error-validation">Este campo é obrigatório</p>';
+}
 });
