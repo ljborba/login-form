@@ -128,10 +128,6 @@ input:hover[type="submit"] {
   width: auto;
 }
 
-#div_checkbox {
-  position: relative;
-}
-
 /* validações */
 
 .error-validation {
@@ -141,7 +137,9 @@ input:hover[type="submit"] {
   font-size: 0.8rem;
 }
 
-
+#div_checkbox {
+  position: relative;
+}
 
 .template {
   display: none;

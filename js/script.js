@@ -209,3 +209,4 @@ if (checkbox.checked === false) {
     div_checkbox.innerHTML += '<p class="error-validation">Este campo é obrigatório</p>';
 }
 });
+
