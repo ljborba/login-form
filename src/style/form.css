@@ -141,6 +141,11 @@ input:hover[type="submit"] {
   position: relative;
 }
 
+#div_checkbox > p {
+  position: absolute;
+  top: 50%;
+}
+
 .template {
   display: none;
 }
